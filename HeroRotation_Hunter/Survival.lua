@@ -212,6 +212,10 @@ local function CDs()
   if I.ManicGrieftorch:IsEquippedAndReady() and (Player:GCDRemains() > Player:GCD() - 0.6 and Player:BuffDown(S.SpearheadBuff)) then
     if Cast(I.ManicGrieftorch, nil, Settings.Commons.DisplayStyle.Trinkets) then return "manic_grieftorch cds 18"; end
   end
+  -- WORKAROUND
+  if I.Djaruun:IsEquippedAndReady() then
+    if Cast(I.Djaruun, nil, Settings.Commons.DisplayStyle.Items) then return "djaruun WORKAROUND"; end
+  end
   -- use_items,use_off_gcd=1,if=gcd.remains>gcd.max-0.1&!buff.spearhead.up
   local TrinketToUse = Player:GetUseableTrinkets(OnUseExcludes)
   if TrinketToUse then

@@ -228,4 +228,5 @@ Item.Hunter.Marksmanship = MergeTableByKey(Item.Hunter.Commons, {
 })
 
 Item.Hunter.Survival = MergeTableByKey(Item.Hunter.Commons, {
+  Djaruun                               = Item(202569, {16}),
 })
